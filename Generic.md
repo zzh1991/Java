@@ -11,6 +11,6 @@
 2. 自动装箱/拆箱：基本类型和他们的包装类
 3. 泛型集合不是协变的，带有限制的通配符：<? extends AnyType>
 4. 泛型static方法，在泛型方法中的类型参数位于返回类型之前
-5. 类型限界：<AnyType extends Comparable<? super AnyType>>
+5. 类型限界：(<AnyType extends Comparable<? super AnyType>>)
 
 ##函数对象：实现Comparator<AnyType>方法

@@ -71,3 +71,18 @@
 * 滑动窗口协议：超时重传：自适应算法：加权平均往返时间RTTs，超时重传时间RTO
 * TCP流量控制：点对点通信量的控制
 * TCP拥塞控制：整个网络的通信控制
+  * 慢开始
+  * 拥塞避免
+  * 快重传
+  * 快恢复
+
+###TCP连接管理
+* 三次握手
+  * SYN = 1, seq = x
+  * SYN = 1, ACK = 1, seq = y, ack = x + 1
+  * ACK = 1, seq = x + 1, ack = y + 1
+* 四次挥手
+  * FIN = 1， seq = u
+  * ACK = 1, seq = v, ack = u + 1
+  * (Servicer)FIN = 1, ACK = 1, seq = w, ack = u + 1
+  * ACK = 1, seq = u + 1, ack = w + 1

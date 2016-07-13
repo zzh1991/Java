@@ -86,3 +86,7 @@
   * ACK = 1, seq = v, ack = u + 1
   * (Servicer)FIN = 1, ACK = 1, seq = w, ack = u + 1
   * ACK = 1, seq = u + 1, ack = w + 1
+
+##网络层（网际协议IP）
+* 网络层向上只提供简单灵活的、无连接的、尽最大努力交付的数据报服务
+* 

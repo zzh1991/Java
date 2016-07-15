@@ -9,3 +9,10 @@
 4. newScheduleThreadPool
 
 ExecuatorService用来管理生命周期
+
+##显示锁
+###Lock接口与ReentrantLock实现
+* 在内置锁中，死锁是一个严重的问题，且不可中断取消任务
+* 可定时的与课轮询的锁提供了另一种选择：避免死锁的发生
+* 可中断的锁lockInterruptedException()，可以取消任务
+* 定时的tryLock同样能够响应中断

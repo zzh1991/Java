@@ -14,7 +14,7 @@
 4. Duque和BlockingDeque（双端队列）：用于工作密取设计中
 
 ##同步工具类
-1. 闭锁（Latch）：延迟线程的进度知道其到达终止状态[CountDownLatch]
+1. 闭锁（Latch）：延迟线程的进度直到其到达终止状态[CountDownLatch]
 2. FutureTask：在Executor框架中表示异步任务；future.get()方法
 3. 信号量（Semaphore）：可以用于实现资源池；add（）和release（）方法
 4. 栅栏（barrier）：用于等待其他线程，在模拟系统中通常需要使用栅栏

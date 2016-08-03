@@ -34,3 +34,7 @@
   * 在HandlerMap集合中依次匹配getHandler(request)方法，返回HandlerExecutionChain对象
   * getInterceptors()获取该Handler中定义的HandlerInterceptor对象，执行preHandle，postHandle，afterCompletion方法
   * 在handlerAdapters集合中调用getHandlerAdapter()方法，执行handler方法
+
+###IntelliJ Idea使用技巧
+* 在部署web应用时，选择war exploded，这样才不会出错，war实测下来是不行的
+* Spring MVC对静态资源的处理：将文件夹放入webapp下面（在servlet.xml中添加<resources mapping="/resources/**" location="/images/" />）

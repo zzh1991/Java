@@ -38,3 +38,10 @@
 ###IntelliJ Idea使用技巧
 * 在部署web应用时，选择war exploded，这样才不会出错，war实测下来是不行的
 * Spring MVC对静态资源的处理：将文件夹放入webapp下面（在servlet.xml中添加<resources mapping="/resources/**" location="/images/" />）
+
+###一个典型的Maven项目：
+* src/main/java：存放java源文件
+* src/main/resources：存放程序资源、配置文件
+* src/test/java：存放测试代码文件
+* src/main/webapp：web根目录
+* pom.xml ： maven项目配置文件，管理依赖，编译，打包

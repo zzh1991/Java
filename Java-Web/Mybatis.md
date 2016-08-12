@@ -5,3 +5,21 @@
 * alias mysql=/usr/local/mysql/bin/mysql
 * alias mysqladmin=/usr/local/mysql/bin/mysqladmin
 * 改变root密码的方法：mysqladmin -u root -p'原始密码' password '新密码'；虽然这种方法并不是最安全的
+
+
+###Java连接Mysql
+* driver使用maven的话会改变：com.mysql.cj.jdbc.Driver
+* url也要改变，将ssl连接设置为false：jdbc:mysql://localhost:3306/your-database?useSSL=false
+
+###Intellij idea Java目录是不会编译xml文件的
+解决方法：在maven下增加如下：
+<build>
+    <resources>
+      <resource>
+        <directory>src/main/java</directory>
+        <includes>
+          <include>**/*.xml</include>
+        </includes>
+      </resource>
+    </resources>
+  </build>

@@ -22,3 +22,5 @@ Android环境搭建
     * 查看手机软件安装路径：adb shell pm path 软件名
     * 屏幕录制：adb shell screenrecord 路径+文件名
     * 手机关机及重启：adb reboot；adb shutdown
+    * Logcat：adb logcat，adb shell dumpsys， adb shell dumpstate 打印东西太多，不好查看
+    * 网络有关：adb shell netstat， adb shell ping（这个比较重要）

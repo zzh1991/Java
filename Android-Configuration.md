@@ -9,3 +9,4 @@ Android环境搭建
 ###ADB配置：
 * android：新建，platform-tools，tools所在路径
 * PATH：添加%android%
+* 使用手册：http://adbshell.com

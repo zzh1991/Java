@@ -9,4 +9,4 @@ Protocal
 * 自解释性：TT[L]V（tag，type，length，value）
 * jce协议增加特性：
   * 压缩数据类型长度
-  * require/option
+  * require/optional

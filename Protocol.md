@@ -12,3 +12,11 @@ Protocal
   * require/optional（建议避免使用require，optional字段可以指定默认值）
   * 0<=tag<=255，占用4比特大小
   * out表示输出参数
+
+###jce结构
+* module
+* 常量定义
+* 枚举定义
+* struct定义
+* Req请求
+* Resp响应

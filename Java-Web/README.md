@@ -20,4 +20,9 @@ Web 开发学习路线
   * 本机用私钥加密传送回去远程发来的字符串
   * 远程使用事先储存的公钥解密
 
+###版本控制工具
+* git
+* svn：TortoiseSVN
+
+
 [视频链接] (https://www.youtube.com/watch?v=sBzRwzY7G-k)

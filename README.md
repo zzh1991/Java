@@ -4,6 +4,10 @@
 * 打开Window的Preferences，将General-Appearance的主题改成暗色主题
 * 修改General-Colors and Fonts-Basic-text Font的字体和大小
 * Java-Editor-Content Assist，将代码提示改为@abcdefghijklmnopqrstuvwxyz.
+* 常用快捷键：
+    * sysout：System.out.println()
+    * Ctrl + D：删除行
+    * Alt + Shift + R: Rename
 
 
 ###Tomcat配置

@@ -24,5 +24,8 @@ Web 开发学习路线
 * git
 * svn：TortoiseSVN
 
+###改变java版本
+* Intellij Idea中project struure可以修改project language level版本，另外module的language level也要修改
+* setting中的compiler也要修改成当前的java版本号
 
 [视频链接] (https://www.youtube.com/watch?v=sBzRwzY7G-k)

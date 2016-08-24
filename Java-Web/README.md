@@ -29,4 +29,11 @@ Web 开发学习路线
 * setting中的compiler也要修改成当前的java版本号
 * try catch shortcut： Ctrl-Alt-T, 6
 
+
+##Java Spark framework
+* 创建一个maven工程，并添加依赖关系sparkjava，slf4j
+* URL中的参数可以使用：name或者*splate数组代替
+* port（4567），默认的端口号为4567，内置的web server为jetty
+* Websocket：一种协议，在TCP连接上提供全双工的通信，只适用嵌入的jetty容器
+
 [视频链接] (https://www.youtube.com/watch?v=sBzRwzY7G-k)

@@ -24,6 +24,11 @@ Web 开发学习路线
 * git
 * svn：TortoiseSVN
 
+###Java开源库
+* Strman-java：字符串处理
+* Dex：数据可视化
+* ND4j：科学计算
+
 ###改变java版本
 * Intellij Idea中project struure可以修改project language level版本，另外module的language level也要修改
 * setting中的compiler也要修改成当前的java版本号

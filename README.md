@@ -29,3 +29,13 @@
 |java.lang.reflect.Constructor	| 用于描述构造方法 |
 |java.lang.reflect.Field	| 描述字段（成员变量） |
 |java.lang.reflect.Method	| 描述成员方法 |
+
+
+##JVM
+* Java虚拟机是一个可以执行Java字节码的虚拟机进程
+
+<br>    Java中static方法不能被覆盖，因为方法覆盖是基于*运行时动态绑定*的，而static方法是编译时静态绑定的
+
+> 同步方法和同步代码块的区别
+>>同步方法默认用this或者当前类class对象作为锁；
+>> 同步代码块可以选择以什么来加锁，比同步方法要更细颗粒度，我们可以选择只同步会发生同步问题的部分代码而不是整个方法；

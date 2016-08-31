@@ -33,3 +33,16 @@ ExecuatorService用来管理生命周期
 * 广泛地用于在操作系统和JVM中实现线程/进程调度机制、垃圾回收机制以及锁和其他并发数据结构
 * 不存在死锁和其他活跃性问题
 * 比较并交换（Compare-and-Swap），实现原子的读-改-写操作
+
+
+##Synchronized
+* 对象锁，类锁
+* synchronized方法和synchronized代码块
+* 每个类会有一个锁，它可以用来控制对static数据成员的并发访问，主要是static synchronized代码块
+* 对于synchronized方法或synchronized代码块，当出现异常时，JVM会自动释放当前线程占用的锁，因此不会犹豫异常呆滞出现死锁现象
+
+##ThreadLocal
+* 原理：每一个Thread都有一个Map，以一个ThreadLocal为key，\<T\>为value
+* Looper，HandlerThread，Handler
+    * Looper利用ThreadLocal为每一个线程建立一个MessageQueue
+    * HandlerThread封装了上面的机制

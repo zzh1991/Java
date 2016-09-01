@@ -39,3 +39,11 @@
 > 同步方法和同步代码块的区别
 >>同步方法默认用this或者当前类class对象作为锁；
 >> 同步代码块可以选择以什么来加锁，比同步方法要更细颗粒度，我们可以选择只同步会发生同步问题的部分代码而不是整个方法；
+
+##ClassLoader
+* 将Class加载到JVM中
+* 审查每个类应该由谁加载
+* Class字节码重新解析成JVM统一要求的对象格式
+* ClassLoader是一个抽象类，有defineClass，findClass，loadClass和resolveClass方法
+* 要想实现自己的ClassLoader，一般继承URLClassLoader这个子类
+* ClassLoader采用上级委托接待机制

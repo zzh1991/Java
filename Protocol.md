@@ -20,3 +20,12 @@ Protocal
 * struct定义
 * Req请求
 * Resp响应
+
+##网络协议分析
+* 基于Fiddler的HTTP/HTTPS协议分
+  * Fiddler2 是一个使用本地 127.0.0.1:8888 的 HTTP 代理，任何能够设置 HTTP 代理为 127.0.0.1:8888 的浏览器和应用程序都可以使用 Fiddler。
+* 基于Wireshark的TCP/HTTP协议深入分析
+  * 使用WinPCAP作为接口，直接与网卡进行数据报文交换
+  * 使用Wireshark分析ARP协议：在显示筛选编辑框中输入“arp”，回车
+  * 使用Wireshark分析ICMP协议：在显示筛选编辑框中输入“icmpv6”，回车
+  * 使用Wireshark分析IP协议：在显示筛选编辑框中输入“ip”，回车

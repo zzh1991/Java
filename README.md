@@ -70,3 +70,23 @@
 * 静态存储：存放静态成员（static定义的）。
 
 <br>针对接口编程是一种重要的程序思维方式，这种方式不仅可以复用代码，还可以降低耦合，提高灵活性，是分解复杂问题的一种重要工具
+<br>
+
+##Java 8 Lambda表达式
+###基本语法
+* Lambda 的基本结构为 (arguments) -> body
+* Stream对象
+      * 指的是一组支持串行并行聚合操作的元素，可以理解为集合或者迭代器的增强版。
+      * 聚合操作有平均值、最大值、最小值、总和、排序、过滤等。
+      * 常见的获取 Stream 的方式
+         * 从集合中获取：Collection.stream()、Collection.parallelStream();
+         * 静态工厂：Arrays.stream(array)、Stream.of(T …)、IntStream.range()
+      * 常用方法：
+         * forEach（e -> method）方法：Collection提供了forEach方法，供我们逐个操作单个对象
+         * 排序：Collections.sort(array, (o1, o2) -> o1(.getA()) - o2(.getA()))、object collection.stream().sorted((o1, o2) -> o1(.getA()) - o2(.getA())).forEach()
+         * 最大、最小值：max（(o1, o2) -> o1(.getA()) - o2(.getA())）、min（）方法
+         * filter（）方法：filter（o -> o.getA() > threshold(equals...) + (&&, ||, !)）
+         * limit(int)方法截取有限的元素
+         * get（）方法获取对象
+         * 重新组织对象结构：map(e -> e.getA()).collect(Collectors.joining(","));
+         * 统计信息：返回类型IntSummaryStatistics, DoubleSummaryStatistics, LongSummaryStatistics 包含了 Stream 中的汇总数据；具体使用mapToInt（看返回类型）(Employee(class or object)::getAge(method)).summaryStatistics()

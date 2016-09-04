@@ -47,3 +47,24 @@
 * ClassLoader是一个抽象类，有defineClass，findClass，loadClass和resolveClass方法
 * 要想实现自己的ClassLoader，一般继承URLClassLoader这个子类
 * ClassLoader采用上级委托接待机制
+
+###字符格式化
+* System.out.println("%d %f", x, y);
+* System.out.printf("%d %f", x, y);
+* java.util.Formatter;
+* String.format("%d %f", x, y);
+
+###正则表达式
+
+|符号|	说明|	符号|	说明|	符号|	说明|
+| ------------- |:-------------: | ------------- |:-------------: | ------------- |:-------------: |
+|^	|一行的起始|	\W	|非字母数字|	\w	|字母数字|
+|$	|一行的末尾|	\D	|非数字|	\d	|数字|
+|+	|>=1	|?	|0或1次	|*	|任意次|
+|.	|非换行任意字符|	[^x]	|非X字符的任意字符|	\S	|任意非空白符字符|
+
+##Java内存存储
+* 栈(Stack) ：存放基本类型的变量数据和对象的引用，但对象本身不存放在栈中，而是存放在堆（new 出来的对象）或者常量池中（字符串常量对象存放在常量池中）
+* 堆(heap)：存放所有new出来的对象和数组。
+* 常量池(constant pool)：在堆中分配出来的一块存储区域，存放储显式的String常量和基本类型常量(float、int等)。另外，可以存储不经常改变的东西(public static final)。常量池中的数据可以共享。
+* 静态存储：存放静态成员（static定义的）。

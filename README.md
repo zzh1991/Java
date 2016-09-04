@@ -87,6 +87,8 @@
          * 最大、最小值：max（(o1, o2) -> o1(.getA()) - o2(.getA())）、min（）方法
          * filter（）方法：filter（o -> o.getA() > threshold(equals...) + (&&, ||, !)）
          * limit(int)方法截取有限的元素
-         * get（）方法获取对象
+         * reduce 的函数操作为二元操作符，一个为前面操作的结果，一个为当前元素，reduce 会逐个对 Stream 中的元素执行指定的操作，并返回最终的结果
+         * get（）方法获取对象：返回Optional 类，Optional类主要目的是防止产生空指针异常
+         * map 方法的作用是依次对 Stream 中的元素进行指定的函数操作，并将按顺序将函数操作的返回值组合到一个新的 Stream 中
          * 重新组织对象结构：map(e -> e.getA()).collect(Collectors.joining(","));
          * 统计信息：返回类型IntSummaryStatistics, DoubleSummaryStatistics, LongSummaryStatistics 包含了 Stream 中的汇总数据；具体使用mapToInt（看返回类型）(Employee(class or object)::getAge(method)).summaryStatistics()

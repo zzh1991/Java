@@ -31,3 +31,12 @@ Protocal
   * 使用Wireshark分析ICMP协议：在显示筛选编辑框中输入“icmpv6”，回车
   * 使用Wireshark分析IP协议：在显示筛选编辑框中输入“ip”，回车
 * windows下好用的终端模拟器：cmder，下载地址：[http://cmder.net]
+
+##Java在读取文件时遇到的问题
+* 默认情况下Scanner是可以读取UTF-8编码格式，但是打包变成jar时，是根据电脑环境来决定的
+* sublime text打开GBK编码格式的文件时，会显示乱码
+```Java
+Locale loc = new Locale("es", "ES");
+Scanner sc = new Scanner(new FileInputStream(file), "UTF-8");
+sc.useLocale(loc);
+```

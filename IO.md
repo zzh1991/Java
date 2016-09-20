@@ -36,3 +36,12 @@ File file = new File("path + file name");
 ##Properties
 * hashtable的子类，常用于配置文件
 * 具备map集合的特点，里面的键值对都是字符串
+
+###Java8 directly read the specific lines
+```Java
+String line32 = Files.readAllLines(Paths.get("file.txt")).get(32) // small file
+// large file
+try (Stream<String> lines = Files.lines(Paths.get("file.txt"))) {
+    line32 = lines.skip(31).findFirst().get();
+}
+```

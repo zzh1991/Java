@@ -38,8 +38,9 @@ ExecuatorService用来管理生命周期
 ##Synchronized
 * Java中每个对象都有一个内部锁，synchronized关键字就是使用对象的内部锁完成同步功能
 * synchronized代码块只会影响同一对象的所有synchronized代码块的同步访问，不影响不同对象的同步访问，不影响同一对象的非synchronized代码块的同步访问
-* 对象锁，类锁
-* synchronized方法和synchronized代码块
+* synchronized关键字不能被继承，子类必须显式地加上synchronized关键字才会同步
+* 定义接口方法时，不能使用synchronized关键字修饰；构造方法也不能使用synchronized关键字
+* synchronized修饰静态方法时，synchronized的内部锁锁定这个类所有对象
 * 每个类会有一个锁，它可以用来控制对static数据成员的并发访问，主要是static synchronized代码块
 * 对于synchronized方法或synchronized代码块，当出现异常时，JVM会自动释放当前线程占用的锁，因此不会犹豫异常呆滞出现死锁现象
 

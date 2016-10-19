@@ -50,3 +50,26 @@
 继承WebMvcConfigurerAdapter完成我们自己的配置类，并通过@EnableWebMvc开启对Spring MVC的支持。
 <br>
 拦截器（Interceptor）实现对每个请求处理前后进行相关的业务处理，类似于Servlet的Filter。继承HanderInterceptorAdapter或者实现HandlerInterceptor接口来实现自定义拦截器。重写WebMvcConfigurerAdapter的addInterceptors来注册自定义拦截器。
+
+##Spring Boot核心
+* Spring Boot全局配置文件application.properties或application.yml，放置在src/main/rsources或者类路径的/config下面。yaml语言时一种以数据为中心的语言，在配置数据时具有面向对象的特征。
+* 多次使用@Value注入properties文件中的值，很麻烦。使用@ConfigurationProperties将properties属性和Bean关联，实现类型安全的配置。
+* 全局Profile使用application-{profile}.properties来配置（如application-prod.properties），在application.properties中设置spring.profiles.active=prod来启用。
+
+##Spring Boot Web
+* ServerPropertiesAutoConfiguration、ServerProperties：自动配置内嵌Servlet容器。
+* HttpEncodingAutoConfiguration HttpEncodingProperties：自动配置http编码。
+* MultipartAutoConfiguration MultipartProperties：自动配置上传文件的属性。
+* JacksonHttpMessageConvertersConfiguration：自动配置mapppingJackson2HttpMessageConverter和mapping2XmlHttpMessageConverter。
+* WebMvcAutoConfiguration、WebMvcProperties：配置Spring MVC。
+<br>
+<br>
+* Spring Boot提供了大量的模板引擎，包括FreeMarker、Groovy、Thymeleaf、Velocity和Mustache。其中，Spring Boot推荐使用Thymeleaf作为模板引擎。
+
+###自动配置的ViewResolver
+* ContentNegotiatingViewResolver：代理给不同ViewResolver来处理不同的View，拥有最高的优先级。
+* BeanNameViewResolver：在控制器中方法返回值位字符串（视图名）时，会根据BeanNameViewResolver去查找Bean的名称为返回字符串的View来渲染视图。
+* InternalResourceViewResolver：通过设置前缀、后缀，以及控制器中方法来返回视图名的字符串，以得到实际页面。
+
+###注册Servlet、Filter、Listener
+当使用嵌入式的Servlet容器（Tomcat、Jetty等）时，我们通过将Servlet、Filter和Listener声明为Spring Bean而达到注册的效果；或者注册ServletRegistrationBean、FilterRegistrationBean和ServletListenerRegistrationBean的Bean。

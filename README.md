@@ -12,7 +12,7 @@
 
 ###Tomcat配置
 * 下载zip文件，这样可以免安装，直接解压就可以使用了
-* 进行换进变量的配置：TOMCAT_HOME：tomcat bin所在位置
+* 进行环境变量的配置：TOMCAT_HOME：tomcat bin所在位置
 * CLASSPATH添加%TOMCAT_HOME%\BIN
 
 ##反射

@@ -11,8 +11,10 @@
 * driver使用maven的话会改变：com.mysql.cj.jdbc.Driver
 * url也要改变，将ssl连接设置为false：jdbc:mysql://localhost:3306/your-database?useSSL=false
 * 存在web所在时区与数据库时区不一致的原因，即timezone错误：serverTimezone=UTC
+* url=jdbc:mysql://localhost:3306/your-database?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
 
 ###Intellij idea Java目录是不会编译xml文件的
+Mybatis XML 配置失效<br>
 解决方法：在pom下增加如下：<br>
 ```Xml
 <build>

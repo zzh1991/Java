@@ -70,6 +70,20 @@ ExecuatorService用来管理生命周期
 - synchronized保护的是对象而非代码，只要访问的是同一个对象的synchronized方法，即使是不同的代码，也会被同步顺序访问
 - synchronized静态方法和synchronized实例方法保护的是不同的对象，不同的两个线程，可以同时，一个执行synchronized静态方法，另一个执行synchronized实例方法
 
+## Wait/Notify
+
+- wait/notify方法只能在synchronized代码块内被调用
+- 生产者/消费者模式调用的是 notifyAll 方法
+- 只能有一个条件等待队列，这是Java wait/notify 机制的局限性
+
+### 同时开始
+
+- 子线程等待通知，主线程通知所有子线程开始
+
+### 等待结束
+
+- CountDownLatch：用于同时开始或者等待结束模式
+
 ##ThreadLocal
 * 原理：每一个Thread都有一个Map，以一个ThreadLocal为key，\<T\>为value
 * Looper，HandlerThread，Handler

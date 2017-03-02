@@ -34,3 +34,5 @@ public static <K,V> Map<K,V> synchronizedMap(Map<K,V> m)
 2. FutureTask：在Executor框架中表示异步任务；future.get()方法
 3. 信号量（Semaphore）：可以用于实现资源池；add（）和release（）方法
 4. 栅栏（barrier）：用于等待其他线程，在模拟系统中通常需要使用栅栏
+5. CountDownLatch：用于同时开始或者等待结束模式。主线程与各个子线程协作的共享变量是一个数，这个数表示未完成的线程个数，初始值为子线程个数，主线程等待该值变为0，而每个子线程结束后都将该值减一，当减为0时调用notifyAll。
+6. CyclicBarrier：用于集合点模式。协作的共享变量依然是一个数，这个数表示未到集合点的线程个数，初始值为子线程个数，每个线程到达集合点后将该值减一，如果不为0，表示还有别的线程未到，进行等待，如果变为0，表示自己是最后一个到的，调用notifyAll唤醒所有线程。

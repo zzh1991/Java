@@ -1,4 +1,22 @@
+[TOC]
+
+# 线程
+
+### 创建线程
+
+- 继承 Thread 并重写 run 方法
+- 实现 Runnable 接口并重写 run 方法
+
+### 属性与方法
+
+- Id 和 Name
+- 优先级
+- 状态
+- 守护线程
+- sleep、yield、join 方法
+
 ##线程池
+
 * 线程池简化了线程的管理工作，将任务的提交过程与执行过程解耦开来
 * Executor基于生产者-消费者模式
 
@@ -43,6 +61,14 @@ ExecuatorService用来管理生命周期
 * synchronized修饰静态方法时，synchronized的内部锁锁定这个类所有对象
 * 每个类会有一个锁，它可以用来控制对static数据成员的并发访问，主要是static synchronized代码块
 * 对于synchronized方法或synchronized代码块，当出现异常时，JVM会自动释放当前线程占用的锁，因此不会犹豫异常呆滞出现死锁现象
+
+### synchronized 使用技巧
+
+- 实例方法、静态方法、代码块
+- 多个线程是可以同时执行同一个synchronized实例方法的，只要它们访问的对象是不同的
+- synchronized实例方法实际保护的是同一个对象的方法调用
+- synchronized保护的是对象而非代码，只要访问的是同一个对象的synchronized方法，即使是不同的代码，也会被同步顺序访问
+- synchronized静态方法和synchronized实例方法保护的是不同的对象，不同的两个线程，可以同时，一个执行synchronized静态方法，另一个执行synchronized实例方法
 
 ##ThreadLocal
 * 原理：每一个Thread都有一个Map，以一个ThreadLocal为key，\<T\>为value

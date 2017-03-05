@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Welcome Java World</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Welcome Java World">
+<meta property="og:url" content="https://zzh1991.github.io/Java/index.html">
+<meta property="og:site_name" content="Welcome Java World">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Welcome Java World">
+  
+    <link rel="alternate" href="/atom.xml" title="Welcome Java World" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/Java/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/Java/" id="logo">Welcome Java World</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/Java/">Home</a>
+        
+          <a class="main-nav-link" href="/Java/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://zzh1991.github.io/Java"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/Java/2016/06/03/hello-world/" class="article-date">
+  <time datetime="2016-06-03T15:59:59.000Z" itemprop="datePublished">2016-06-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/Java/2016/06/03/hello-world/">Java Knowledge</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>###Eclipse配置指南</p>
+<ul>
+<li>打开Window的Preferences，将General-Appearance的主题改成暗色主题</li>
+<li>修改General-Colors and Fonts-Basic-text Font的字体和大小</li>
+<li>Java-Editor-Content Assist，将代码提示改为@abcdefghijklmnopqrstuvwxyz.</li>
+<li>常用快捷键：<ul>
+<li>sysout：System.out.println()</li>
+<li>Ctrl + D：删除行</li>
+<li>Alt + Shift + R: Rename</li>
+</ul>
+</li>
+</ul>
+<p>###Tomcat配置</p>
+<ul>
+<li>下载zip文件，这样可以免安装，直接解压就可以使用了</li>
+<li>进行环境变量的配置：TOMCAT_HOME：tomcat bin所在位置</li>
+<li>CLASSPATH添加%TOMCAT_HOME%\BIN</li>
+</ul>
+<p>##反射</p>
+<ul>
+<li>反射机制是在运行状态中</li>
+<li>动态获取类或对象的属性和方法，需提前获取这个类的Class对象</li>
+<li>获取class文件对象<pre><code>* 对象的getClass（）方法
+*  类的静态属性：类名.class
+*   Class类的静态方法：Class.forName(String 类名)
+</code></pre></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>java.lang.Class</td>
+<td style="text-align:center">描述编译后的class文件的对象</td>
+</tr>
+<tr>
+<td>java.lang.reflect.Constructor</td>
+<td style="text-align:center">用于描述构造方法</td>
+</tr>
+<tr>
+<td>java.lang.reflect.Field</td>
+<td style="text-align:center">描述字段（成员变量）</td>
+</tr>
+<tr>
+<td>java.lang.reflect.Method</td>
+<td style="text-align:center">描述成员方法</td>
+</tr>
+</tbody>
+</table>
+<p>##JVM</p>
+<ul>
+<li>Java虚拟机是一个可以执行Java字节码的虚拟机进程</li>
+</ul>
+<p><br>    Java中static方法不能被覆盖，因为方法覆盖是基于<em>运行时动态绑定</em>的，而static方法是编译时静态绑定的</p>
+<blockquote>
+<p>同步方法和同步代码块的区别</p>
+<blockquote>
+<p>同步方法默认用this或者当前类class对象作为锁；<br>同步代码块可以选择以什么来加锁，比同步方法要更细颗粒度，我们可以选择只同步会发生同步问题的部分代码而不是整个方法；</p>
+</blockquote>
+</blockquote>
+<p>##ClassLoader</p>
+<ul>
+<li>将Class加载到JVM中</li>
+<li>审查每个类应该由谁加载</li>
+<li>Class字节码重新解析成JVM统一要求的对象格式</li>
+<li>ClassLoader是一个抽象类，有defineClass，findClass，loadClass和resolveClass方法</li>
+<li>要想实现自己的ClassLoader，一般继承URLClassLoader这个子类</li>
+<li>ClassLoader采用上级委托接待机制</li>
+</ul>
+<p>###字符格式化</p>
+<ul>
+<li>System.out.println(“%d %f”, x, y);</li>
+<li>System.out.printf(“%d %f”, x, y);</li>
+<li>java.util.Formatter;</li>
+<li>String.format(“%d %f”, x, y);</li>
+</ul>
+<p>###正则表达式</p>
+<table>
+<thead>
+<tr>
+<th>符号</th>
+<th style="text-align:center">说明</th>
+<th>符号</th>
+<th style="text-align:center">说明</th>
+<th>符号</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>^</td>
+<td style="text-align:center">一行的起始</td>
+<td>\W</td>
+<td style="text-align:center">非字母数字</td>
+<td>\w</td>
+<td style="text-align:center">字母数字</td>
+</tr>
+<tr>
+<td>$</td>
+<td style="text-align:center">一行的末尾</td>
+<td>\D</td>
+<td style="text-align:center">非数字</td>
+<td>\d</td>
+<td style="text-align:center">数字</td>
+</tr>
+<tr>
+<td>+</td>
+<td style="text-align:center">&gt;=1</td>
+<td>?</td>
+<td style="text-align:center">0或1次</td>
+<td>*</td>
+<td style="text-align:center">任意次</td>
+</tr>
+<tr>
+<td>.</td>
+<td style="text-align:center">非换行任意字符</td>
+<td>[^x]</td>
+<td style="text-align:center">非X字符的任意字符</td>
+<td>\S</td>
+<td style="text-align:center">任意非空白符字符</td>
+</tr>
+</tbody>
+</table>
+<p>##Java内存存储</p>
+<ul>
+<li>栈(Stack) ：存放基本类型的变量数据和对象的引用，但对象本身不存放在栈中，而是存放在堆（new 出来的对象）或者常量池中（字符串常量对象存放在常量池中）</li>
+<li>堆(heap)：存放所有new出来的对象和数组。</li>
+<li>常量池(constant pool)：在堆中分配出来的一块存储区域，存放储显式的String常量和基本类型常量(float、int等)。另外，可以存储不经常改变的东西(public static final)。常量池中的数据可以共享。</li>
+<li>静态存储：存放静态成员（static定义的）。</li>
+</ul>
+<p><br>针对接口编程是一种重要的程序思维方式，这种方式不仅可以复用代码，还可以降低耦合，提高灵活性，是分解复杂问题的一种重要工具<br><br></p>
+<p>##Java 8 Lambda表达式</p>
+<p>###基本语法</p>
+<ul>
+<li>Lambda 的基本结构为 (arguments) -&gt; body</li>
+<li>Stream对象<pre><code>* 指的是一组支持串行并行聚合操作的元素，可以理解为集合或者迭代器的增强版。
+* 聚合操作有平均值、最大值、最小值、总和、排序、过滤等。
+* 常见的获取 Stream 的方式
+   * 从集合中获取：Collection.stream()、Collection.parallelStream();
+   * 静态工厂：Arrays.stream(array)、Stream.of(T …)、IntStream.range()
+* 常用方法：
+   * forEach（e -&gt; method）方法：Collection提供了forEach方法，供我们逐个操作单个对象
+   * 排序：Collections.sort(array, (o1, o2) -&gt; o1(.getA()) - o2(.getA()))、object collection.stream().sorted((o1, o2) -&gt; o1(.getA()) - o2(.getA())).forEach()
+   * 最大、最小值：max（(o1, o2) -&gt; o1(.getA()) - o2(.getA())）、min（）方法
+   * filter（）方法：filter（o -&gt; o.getA() &gt; threshold(equals...) + (&amp;&amp;, ||, !)）
+   * limit(int)方法截取有限的元素
+   * reduce 的函数操作为二元操作符，一个为前面操作的结果，一个为当前元素，reduce 会逐个对 Stream 中的元素执行指定的操作，并返回最终的结果
+   * get（）方法获取对象：返回Optional 类，Optional类主要目的是防止产生空指针异常
+   * map 方法的作用是依次对 Stream 中的元素进行指定的函数操作，并将按顺序将函数操作的返回值组合到一个新的 Stream 中
+   * 重新组织对象结构：map(e -&gt; e.getA()).collect(Collectors.joining(&quot;,&quot;));
+   * 统计信息：返回类型IntSummaryStatistics, DoubleSummaryStatistics, LongSummaryStatistics 包含了 Stream 中的汇总数据；具体使用mapToInt（看返回类型）(Employee(class or object)::getAge(method)).summaryStatistics()
+</code></pre></li>
+</ul>
+<p>###六大设计原则</p>
+<ul>
+<li>依赖倒置原则：高层模块不应该依赖底层模块</li>
+<li>开闭原则：对扩展开放，对修改关闭</li>
+<li>单一职责原则：一个类的职责只有一个</li>
+<li>（里式）替换原则：子类必须能够替换父类</li>
+<li>接口隔离原则：暴露给用户的接口小而完备</li>
+<li>迪米特法则：一个对象应该对其他对象保持最少了解</li>
+</ul>
+<p>##23种设计模式</p>
+<p>###创建型模式</p>
+<ul>
+<li>工厂模式：return一个new出来的对象</li>
+<li>抽象工厂模式：return一堆new出来的对象</li>
+<li>原型模式：通过copy自己来创建对象</li>
+<li>单例模式：一个类只有一个实例</li>
+<li>生成器模式：负责对象的分步创建，由外部实现</li>
+</ul>
+<p>###结构型模式、行为模式</p>
+<ul>
+<li>策略模式：定义一系列的算法，只要有if/else的地方其实都可以使用策略模式</li>
+<li>适配器模式：将一个类的接口转换成客户希望的另一个接口；有类适配器和对象适配器</li>
+<li>模板方法：定义一个操作中的算法的骨架，而将一些步骤延迟到子类中</li>
+<li>装饰器：动态给对象添加一些额外的职责</li>
+<li>观察者：定义对象间的一种一对多的依赖关系，修改时通知</li>
+</ul>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://zzh1991.github.io/Java/Java/2016/06/03/hello-world/" data-id="cizw4spuh0000a5w36993e0as" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/Java/archives/2016/06/">June 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/Java/2016/06/03/hello-world/">Java Knowledge</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Zhihao Zhang<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/Java/" class="mobile-nav-link">Home</a>
+  
+    <a href="/Java/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/Java/fancybox/jquery.fancybox.css">
+  <script src="/Java/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/Java/js/script.js"></script>
+
+  </div>
+</body>
+</html>

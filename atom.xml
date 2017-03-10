@@ -5,7 +5,7 @@
   <link href="/Java/atom.xml" rel="self"/>
   
   <link href="https://zzh1991.github.com/Java/"/>
-  <updated>2017-03-10T08:10:29.000Z</updated>
+  <updated>2017-03-10T08:12:48.000Z</updated>
   <id>https://zzh1991.github.com/Java/</id>
   
   <author>
@@ -16,13 +16,13 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>java-basic</title>
+    <title>Java Basic</title>
     <link href="https://zzh1991.github.com/Java/2017/03/10/java-basic/"/>
     <id>https://zzh1991.github.com/Java/2017/03/10/java-basic/</id>
     <published>2017-03-10T08:01:44.000Z</published>
-    <updated>2017-03-10T08:10:29.000Z</updated>
+    <updated>2017-03-10T08:12:48.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Java-Basic"><a href="#Java-Basic" class="headerlink" title="Java Basic"></a>Java Basic</h1><h2 id="字符串操作"><a href="#字符串操作" class="headerlink" title="字符串操作"></a>字符串操作</h2><h3 id="字符串比较"><a href="#字符串比较" class="headerlink" title="字符串比较"></a>字符串比较</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">boolean</span> result = str1.equals(str2);</div><div class="line"><span class="keyword">boolean</span> result = str1.equalsIgnoreCase(str2);</div></pre></td></tr></table></figure>
+    <content type="html"><![CDATA[<h2 id="字符串操作"><a href="#字符串操作" class="headerlink" title="字符串操作"></a>字符串操作</h2><h3 id="字符串比较"><a href="#字符串比较" class="headerlink" title="字符串比较"></a>字符串比较</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">boolean</span> result = str1.equals(str2);</div><div class="line"><span class="keyword">boolean</span> result = str1.equalsIgnoreCase(str2);</div></pre></td></tr></table></figure>
 <h3 id="搜索与检索"><a href="#搜索与检索" class="headerlink" title="搜索与检索"></a>搜索与检索</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> result = str1.indexOf(str2);</div><div class="line"><span class="comment">// 从字符串的第 index 个数开始查找</span></div><div class="line"><span class="keyword">int</span> result = str1.indexOf(str2, index);</div><div class="line"><span class="comment">// 从第 index1 数取到最后</span></div><div class="line">String index = str1.substring(index1);</div><div class="line"><span class="comment">//  范围 [index1, index2)</span></div><div class="line">String index = str1.substring(index1, index2);</div></pre></td></tr></table></figure>
 <h3 id="字符串反转"><a href="#字符串反转" class="headerlink" title="字符串反转"></a>字符串反转</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">StringBuilder sb = <span class="keyword">new</span> StringBuilder(string);</div><div class="line">String str = sb.reverse().toString();</div></pre></td></tr></table></figure>
 <h3 id="按单词的字符串反转"><a href="#按单词的字符串反转" class="headerlink" title="按单词的字符串反转"></a>按单词的字符串反转</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">String str = <span class="string">"hello world"</span>;</div><div class="line">Deque&lt;String&gt; stack = <span class="keyword">new</span> ArrayDeque();</div><div class="line">StringTokenizer strTok = <span class="keyword">new</span> StringTokenizer(str);</div><div class="line"><span class="keyword">while</span>(strTok.hasMoreTokens())&#123;</div><div class="line">        stack.push(strTok.nextElement());</div><div class="line">&#125;</div><div class="line">StringBuilder sb = <span class="keyword">new</span> StringBuilder();</div><div class="line"><span class="keyword">while</span>(!stack.empty()) &#123;</div><div class="line">sb.append(stack.pop());</div><div class="line">sb.append(<span class="string">" "</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>

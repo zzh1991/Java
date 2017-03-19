@@ -4,7 +4,7 @@
 
 - 继承 Thread 并重写 run 方法
 - 实现 Runnable 接口并重写 run 方法
-
+- Java 程序运行包含两个线程，一是主线程 main 函数，二是垃圾回收线程
 ### 属性与方法
 
 - Id 和 Name
@@ -13,7 +13,7 @@
 - 守护线程
 - sleep、yield、join 方法
 
-##线程池
+## 线程池
 
 * 线程池简化了线程的管理工作，将任务的提交过程与执行过程解耦开来
 * Executor基于生产者-消费者模式
@@ -24,10 +24,10 @@
 3. newSingleThreadPool
 4. newScheduleThreadPool
 
-ExecuatorService用来管理生命周期
+### ExecuatorService 用来管理生命周期
 
-##显示锁
-###Lock接口与ReentrantLock实现
+## 显示锁
+### Lock接口与ReentrantLock实现
 * 在内置锁中，死锁是一个严重的问题，且不可中断取消任务
 * 可定时的与可轮询的锁提供了另一种选择：避免死锁的发生
 * 可中断的锁lockInterruptedException()，可以取消任务
@@ -36,22 +36,22 @@ ExecuatorService用来管理生命周期
 * 公平性：在大多数情况下，非公平锁的性能要远远高于公平锁的性能
 * 仅当内置锁不能满足需求时，才可以考虑使用ReentrantLock
 
-###读-写锁ReadWriteLock接口
+### 读-写锁ReadWriteLock接口
 * ReentrantReadWriteLock实现
 * 当访问以读取操作为主的数据结构
 
-##volitale变量
+## volitale变量
 * 与锁相比，是一种更轻量级的同步机制
 * 使用这些变量时不会发生上下文切换或线程调度等操作
 * 不能用于构建原子的复合操作
 
-##非阻塞算法
+## 非阻塞算法
 * 广泛地用于在操作系统和JVM中实现线程/进程调度机制、垃圾回收机制以及锁和其他并发数据结构
 * 不存在死锁和其他活跃性问题
 * 比较并交换（Compare-and-Swap），实现原子的读-改-写操作
 
 
-##Synchronized
+## Synchronized
 * Java中每个对象都有一个内部锁，synchronized关键字就是使用对象的内部锁完成同步功能
 * synchronized代码块只会影响同一对象的所有synchronized代码块的同步访问，不影响不同对象的同步访问，不影响同一对象的非synchronized代码块的同步访问
 * synchronized关键字不能被继承，子类必须显式地加上synchronized关键字才会同步
@@ -82,7 +82,7 @@ ExecuatorService用来管理生命周期
 
 - CountDownLatch：用于同时开始或者等待结束模式
 
-##ThreadLocal
+## ThreadLocal
 * 原理：每一个Thread都有一个Map，以一个ThreadLocal为key，\<T\>为value
 * Looper，HandlerThread，Handler
     * Looper利用ThreadLocal为每一个线程建立一个MessageQueue

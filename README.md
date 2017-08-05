@@ -23,7 +23,7 @@
       *  类的静态属性：类名.class
       *   Class类的静态方法：Class.forName(String 类名)
 
-| Class        | 描述           | 
+| Class        | 描述           |
 | -------------            |:-------------:          |
 |java.lang.Class	| 描述编译后的class文件的对象 |
 |java.lang.reflect.Constructor	| 用于描述构造方法 |
@@ -74,24 +74,24 @@
 
 ## Java 8 Lambda表达式
 ### 基本语法
-* Lambda 的基本结构为 (arguments) -> body
-* Stream对象
-      * 指的是一组支持串行并行聚合操作的元素，可以理解为集合或者迭代器的增强版。
-      * 聚合操作有平均值、最大值、最小值、总和、排序、过滤等。
-      * 常见的获取 Stream 的方式
-         * 从集合中获取：Collection.stream()、Collection.parallelStream();
-         * 静态工厂：Arrays.stream(array)、Stream.of(T …)、IntStream.range()
-      * 常用方法：
-         * forEach（e -> method）方法：Collection提供了forEach方法，供我们逐个操作单个对象
-         * 排序：Collections.sort(array, (o1, o2) -> o1(.getA()) - o2(.getA()))、object collection.stream().sorted((o1, o2) -> o1(.getA()) - o2(.getA())).forEach()
-         * 最大、最小值：max（(o1, o2) -> o1(.getA()) - o2(.getA())）、min（）方法
-         * filter（）方法：filter（o -> o.getA() > threshold(equals...) + (&&, ||, !)）
-         * limit(int)方法截取有限的元素
-         * reduce 的函数操作为二元操作符，一个为前面操作的结果，一个为当前元素，reduce 会逐个对 Stream 中的元素执行指定的操作，并返回最终的结果
-         * get（）方法获取对象：返回Optional 类，Optional类主要目的是防止产生空指针异常
-         * map 方法的作用是依次对 Stream 中的元素进行指定的函数操作，并将按顺序将函数操作的返回值组合到一个新的 Stream 中
-         * 重新组织对象结构：map(e -> e.getA()).collect(Collectors.joining(","));
-         * 统计信息：返回类型IntSummaryStatistics, DoubleSummaryStatistics, LongSummaryStatistics 包含了 Stream 中的汇总数据；具体使用mapToInt（看返回类型）(Employee(class or object)::getAge(method)).summaryStatistics()
+- Lambda 的基本结构为 (arguments) -> body
+- Stream对象
+  - 指的是一组支持串行并行聚合操作的元素，可以理解为集合或者迭代器的增强版。
+  - 聚合操作有平均值、最大值、最小值、总和、排序、过滤等。
+  - 常见的获取 Stream 的方式
+     - 从集合中获取：Collection.stream()、Collection.parallelStream()
+     - 静态工厂：Arrays.stream(array)、Stream.of(T …)、IntStream.range()
+  - 常用方法：
+     - forEach（e -> method）方法：Collection提供了forEach方法，供我们逐个操作单个对象
+     - 排序：Collections.sort(array, (o1, o2) -> o1(.getA()) - o2(.getA()))、object collection.stream().sorted((o1, o2) -> o1(.getA()) - o2(.getA())).forEach()
+     - 最大、最小值：max（(o1, o2) -> o1(.getA()) - o2(.getA())）、min（）方法
+     - filter（）方法：filter（o -> o.getA() > threshold(equals...) + (&&, ||, !)）
+     - limit(int)方法截取有限的元素
+     - reduce 的函数操作为二元操作符，一个为前面操作的结果，一个为当前元素，reduce 会逐个对 Stream 中的元素执行指定的操作，并返回最终的结果
+     - get（）方法获取对象：返回Optional 类，Optional类主要目的是防止产生空指针异常
+     - map 方法的作用是依次对 Stream 中的元素进行指定的函数操作，并将按顺序将函数操作的返回值组合到一个新的 Stream 中
+     - 重新组织对象结构：map(e -> e.getA()).collect(Collectors.joining(","));
+     - 统计信息：返回类型IntSummaryStatistics, DoubleSummaryStatistics, LongSummaryStatistics 包含了 Stream 中的汇总数据；具体使用mapToInt（看返回类型）(Employee(class or object)::getAge(method)).summaryStatistics()
 
 ### 六大设计原则
 * 依赖倒置原则：高层模块不应该依赖底层模块

@@ -1,5 +1,5 @@
-##Spring MVC
-###Spring MVC的总体设计
+## Spring MVC
+### Spring MVC的总体设计
 * 在web.xml中配置一个DispatchServlet
 * 再定义一个dispatcherServlet-servlet.xml配置文件（定义、配置Mapping, View, Control的bean）
 * 3个重要组件功能：
@@ -7,7 +7,7 @@
   * 实现业务逻辑的Handler实例对象
   * 渲染模板资源
 
-###Spring MVC初始化
+### Spring MVC初始化
 * HttpServletBean的init()方法获取初始化参数，并创建BeanWrapper对象
 * FrameworkServlet的initServeltBean()方法创建WebApplicationContext对象，并初始化Spring容器
 * 调用WebApplicationContext的onApplicationEvent(), onRefresh()方法完成配置文件的加载
@@ -21,7 +21,7 @@
   * initRequestToViewNameTranslator
   * initViewResolver：用于将View解析成页面（可以根据JSP解析，或者按照Velocity模板解析）
 
-###Control设计
+### Control设计
 * Control主要由HandlerMapping和HandlerAdapters两个组件提供
 * HandlerMapping初始化：
   * 将一个或多个URL映射到一个或多个Spring Bean中
@@ -35,11 +35,11 @@
   * getInterceptors()获取该Handler中定义的HandlerInterceptor对象，执行preHandle，postHandle，afterCompletion方法
   * 在handlerAdapters集合中调用getHandlerAdapter()方法，执行handler方法
 
-###IntelliJ Idea使用技巧
+### IntelliJ Idea使用技巧
 * 在部署web应用时，选择war exploded，这样才不会出错，war实测下来是不行的
 * Spring MVC对静态资源的处理：将文件夹放入webapp下面（在servlet.xml中添加<resources mapping="/resources/**" location="/images/" />）
 
-###一个典型的Maven项目：
+### 一个典型的Maven项目：
 * src/main/java：存放java源文件
 * src/main/resources：存放程序资源、配置文件
 * src/test/java：存放测试代码文件

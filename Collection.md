@@ -1,10 +1,10 @@
 Collection 容器
 ======
 
-###Arrays方法：
+### Arrays方法：
 * asList（）方法返回List类型，但是不支持add和delete方法，所以用起来也不是很方便
 
-###ArrayList常用方法
+### ArrayList常用方法
 * add、get、set、remove
 * contains、indexOf，lastIndexOf
 

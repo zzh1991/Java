@@ -1,7 +1,7 @@
 Protocal
 ======
 
-###protocol serialize
+### protocol serialize
 * 紧凑模式：raw data，除了数据本身外，没有一点额外冗余信息
 * 可扩展：添加协议version信息
 * 更好的可扩展性：为每一个字段添加一个额外信息——tag
@@ -13,7 +13,7 @@ Protocal
   * 0<=tag<=255，占用4比特大小
   * out表示输出参数
 
-###jce结构
+### jce结构
 * module
 * 常量定义
 * 枚举定义
@@ -21,7 +21,7 @@ Protocal
 * Req请求
 * Resp响应
 
-##网络协议分析
+## 网络协议分析
 * 基于Fiddler的HTTP/HTTPS协议分
   * Fiddler2 是一个使用本地 127.0.0.1:8888 的 HTTP 代理，任何能够设置 HTTP 代理为 127.0.0.1:8888 的浏览器和应用程序都可以使用 Fiddler。
 * 基于Wireshark的TCP/HTTP协议深入分析
@@ -32,7 +32,7 @@ Protocal
   * 使用Wireshark分析IP协议：在显示筛选编辑框中输入“ip”，回车
 * windows下好用的终端模拟器：cmder，下载地址：[http://cmder.net]
 
-##Java在读取文件时遇到的问题
+## Java在读取文件时遇到的问题
 * 默认情况下Scanner是可以读取UTF-8编码格式，但是打包变成jar时，是根据电脑环境来决定的
 * sublime text打开GBK编码格式的文件时，会显示乱码
 ```Java

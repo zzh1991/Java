@@ -1,5 +1,5 @@
 
-##同步容器类
+## 同步容器类
 
   包括：Vector和HashTable
 
@@ -13,7 +13,7 @@ public static <K,V> Map<K,V> synchronizedMap(Map<K,V> m)
 * 同步容器类支持客户端加锁
 * 如果不希望在迭代期间对容器加锁，另一种方法就是**“克隆”**容器
 
-##并发容器
+## 并发容器
 
 线程安全，没有使用synchronized、没有迭代问题、直接支持一些复合操作
 
@@ -26,7 +26,7 @@ public static <K,V> Map<K,V> synchronizedMap(Map<K,V> m)
 4. Duque和BlockingDeque（双端队列）：用于工作密取设计中
 5. ConcurrentSkipListSet
 
-##同步工具类
+## 同步工具类
 1. 闭锁（Latch）：延迟线程的进度直到其到达终止状态[CountDownLatch]
 2. FutureTask：在Executor框架中表示异步任务；future.get()方法
 3. 信号量（Semaphore）：可以用于实现资源池；add（）和release（）方法

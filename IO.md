@@ -2,20 +2,21 @@ IO
 ======
 
 ## File操作常见错误
-* windows下的文件分隔符：是/而不是\，（或者使用\\）
-* String以.号分割split时，必须使用"\\."，而不能只使用"."，那样得到的数组长度为0
+* windows 下的文件分隔符：是/而不是\，（或者使用\\）
+* String 以 . 号分割 split 时，必须使用 "\\." ，而不能只使用 "." ，那样得到的数组长度为0
 * String以(左括号分割split时，必须使用"\\("，而不能只使用"("，那样得到的数组长度为0
 
 ## 文件过滤
 ```Java
 File file = new File("path + file name");
-  String[] FileList = file.list(new FilenameFilter() {
-      // 文件过滤
-      @Override
-      public boolean accept(File dir, String name) {
-          // 只返回txt后缀的文件
-          return name.endsWith(".txt");
-      }
+String[] FileList = file.list(new FilenameFilter() {
+  // 文件过滤
+  @Override
+  public boolean accept(File dir, String name) {
+      // 只返回txt后缀的文件
+      return name.endsWith(".txt");
+  }
+}
 ```
 
 ## 字符流的缓冲区
